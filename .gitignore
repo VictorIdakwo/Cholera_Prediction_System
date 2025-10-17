@@ -39,29 +39,38 @@ ENV/
 *~
 
 # Data files (large files)
-Data/*.tif
-Data/*.shp
-Data/*.shx
-Data/*.dbf
-Data/*.prj
-Data/*.cpg
-*.xlsx
-*.xls
-*.csv
+# Data/*.tif - Allow small TIF files under 100MB
+# Data/*.shp - Allow shapefiles
+# Data/*.shx - Allow shapefile index
+# Data/*.dbf - Allow shapefile attributes
+# Data/*.prj - Allow projection files
+# Data/*.cpg - Allow encoding files
+# *.xlsx - Allow sample Excel data
+# *.xls - Allow sample Excel data
+# *.csv - Allow CSV data
 
-# Large TIF files (exceed GitHub 100MB limit)
-*.tif
-nga_general_2020_geotiff/
-environmental_data/*.tif
+# Large TIF files (exceed GitHub 100MB limit) - SPECIFIC FILES ONLY
+nga_general_2020_geotiff/nga_general_2020.tif
+environmental_data/lst_day_mean.tif
+environmental_data/lst_night_mean.tif
+environmental_data/ndvi_mean.tif
+environmental_data/precipitation_mean.tif
+environmental_data/precipitation_total.tif
 rwi.tif
+Data/rwi.tif
+Data/nga_general_2020.tif
+
+# Temporary Excel files
+~$*.xlsx
+~$*.xls
 
 # Output files
-predictions/
+# predictions/ - COMMENTED OUT to include sample predictions for demo
 model_output/
 merged_data/
 environmental_data_excel/
-*.pdf
-*.png
+# *.pdf - Allow PDF reports
+# *.png - Allow logo and images
 *.jpg
 *.jpeg
 

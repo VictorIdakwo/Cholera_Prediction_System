@@ -1,0 +1,107 @@
+======================================================================
+CHOLERA PREDICTION MODEL - COMPREHENSIVE REPORT
+======================================================================
+
+Report Generated: 2025-10-17 10:02:06
+
+1. DATA SUMMARY
+----------------------------------------------------------------------
+   Total Records: 3156
+   LGAs: 6 (Bade, Fune, Gujba, Machina, Nangere, Nguru)
+   Date Range: 2014-10-27 00:00:00 to 2024-11-24 00:00:00
+   Total Cholera Cases: 513
+   Weeks with Cases: 44
+
+2. CASE DISTRIBUTION BY LGA
+----------------------------------------------------------------------
+   Fune: 228 cases (44.4%)
+   Nangere: 75 cases (14.6%)
+   Nguru: 59 cases (11.5%)
+   Machina: 58 cases (11.3%)
+   Bade: 55 cases (10.7%)
+   Gujba: 38 cases (7.4%)
+
+3. MODEL PERFORMANCE
+----------------------------------------------------------------------
+
+   Random Forest:
+      Train R²: 0.9211
+      Test R²: 0.6602
+      CV R² (mean): 0.4105
+      RMSE: 0.8858
+      MAE: 0.1191
+
+   Gradient Boosting:
+      Train R²: 0.9999
+      Test R²: -0.0036
+      CV R² (mean): -0.1951
+      RMSE: 1.5224
+      MAE: 0.1507
+
+   Ridge Regression:
+      Train R²: 0.7369
+      Test R²: 0.7770
+      CV R² (mean): 0.3831
+      RMSE: 0.7177
+      MAE: 0.1540
+
+   Lasso Regression:
+      Train R²: 0.6754
+      Test R²: 0.7199
+      CV R² (mean): 0.4235
+      RMSE: 0.8044
+      MAE: 0.1264
+
+   Best Model: Ridge Regression
+
+4. FUTURE PREDICTIONS (Next 12 Weeks)
+----------------------------------------------------------------------
+
+   Bade:
+      Predicted Total Cases: 56.1
+      High-Risk Weeks: 0/12
+      Next Week Prediction: 4.7 cases
+
+   Fune:
+      Predicted Total Cases: 544.5
+      High-Risk Weeks: 12/12
+      Next Week Prediction: 45.4 cases
+
+   Gujba:
+      Predicted Total Cases: 0.6
+      High-Risk Weeks: 0/12
+      Next Week Prediction: 0.0 cases
+
+   Machina:
+      Predicted Total Cases: 24.6
+      High-Risk Weeks: 0/12
+      Next Week Prediction: 2.0 cases
+
+   Nangere:
+      Predicted Total Cases: 69.1
+      High-Risk Weeks: 12/12
+      Next Week Prediction: 5.7 cases
+
+   Nguru:
+      Predicted Total Cases: 95.9
+      High-Risk Weeks: 12/12
+      Next Week Prediction: 8.0 cases
+
+
+5. RECOMMENDATIONS
+----------------------------------------------------------------------
+   Priority LGAs for Intervention:
+      1. Fune (Expected: 544.5 cases)
+      2. Nguru (Expected: 95.9 cases)
+      3. Nangere (Expected: 69.1 cases)
+
+   Recommended Actions:
+      - Strengthen surveillance in priority LGAs
+      - Pre-position cholera treatment supplies
+      - Conduct community health education
+      - Improve water and sanitation facilities
+      - Monitor high-risk weeks identified above
+
+======================================================================
+END OF REPORT
+======================================================================
