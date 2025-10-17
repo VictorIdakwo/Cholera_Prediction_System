@@ -1,0 +1,140 @@
+===============================================================================
+CHOLERA PREDICTION SYSTEM - GITHUB PUSH INSTRUCTIONS
+===============================================================================
+
+QUICK START - Copy and paste these commands in order:
+-------------------------------------------------------------------------------
+
+1. Open PowerShell or Command Prompt
+
+2. Navigate to project folder:
+   cd "C:\Users\victor.idakwo\Documents\ehealth Africa\ehealth Africa\eHA GitHub\Mian Disease Modelling\cholera"
+
+3. Initialize Git (if not already done):
+   git init
+
+4. Add remote repository:
+   git remote add origin https://github.com/VictorIdakwo/Cholera_Prediction_System.git
+
+5. Stage all files:
+   git add .
+
+6. Check what will be committed:
+   git status
+
+   VERIFY:
+   ✓ Should see: .gitignore, .py files, streamlit_app/, Data/, *.md
+   ✗ Should NOT see: keys/, service_account.json, predictions/
+
+7. Commit with message:
+   git commit -m "Initial commit - Cholera Prediction System with Streamlit Cloud support"
+
+8. Set main branch:
+   git branch -M main
+
+9. Push to GitHub:
+   git push -u origin main
+
+   NOTE: You'll need to authenticate with GitHub
+   - Username: VictorIdakwo
+   - Password: Use Personal Access Token (not your account password)
+
+10. Verify on GitHub:
+    Go to: https://github.com/VictorIdakwo/Cholera_Prediction_System
+    Check that files are there and no secrets are visible
+
+===============================================================================
+STREAMLIT CLOUD DEPLOYMENT
+===============================================================================
+
+After pushing to GitHub:
+
+1. Go to: https://share.streamlit.io
+
+2. Sign in with GitHub
+
+3. Click "New app"
+
+4. Configure:
+   - Repository: VictorIdakwo/Cholera_Prediction_System
+   - Branch: main
+   - Main file: streamlit_app/app.py
+
+5. Click "Advanced settings"
+
+6. In "Secrets" section, paste (replace with your actual values):
+
+[gee]
+type = "service_account"
+project_id = "your-project-id"
+private_key_id = "your-key-id"
+private_key = """-----BEGIN PRIVATE KEY-----
+paste-your-full-private-key-here-with-all-newlines
+-----END PRIVATE KEY-----
+"""
+client_email = "your-service-account@project.iam.gserviceaccount.com"
+client_id = "123456789"
+auth_uri = "https://accounts.google.com/o/oauth2/auth"
+token_uri = "https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url = "https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url = "https://www.googleapis.com/robot/v1/metadata/x509/your-sa"
+
+7. Click "Deploy!"
+
+8. Wait for deployment (2-5 minutes)
+
+9. Check logs for:
+   "✅ GEE initialized with Streamlit secrets"
+
+10. Your app is live!
+
+===============================================================================
+FILES CREATED FOR YOU
+===============================================================================
+
+Security:
+✓ .gitignore - Excludes sensitive files from Git
+
+Authentication:
+✓ gee_auth.py - Handles GEE authentication (local & cloud)
+
+Documentation:
+✓ STREAMLIT_CLOUD_SETUP.md - Detailed deployment guide
+✓ GIT_COMMANDS.md - Git reference
+✓ DEPLOYMENT_READY.md - Complete setup summary
+✓ .streamlit/secrets.toml.example - Secrets template
+
+Updates:
+✓ streamlit_app/pipeline_runner.py - Now supports Streamlit secrets
+✓ streamlit_app/app.py - eHealth Africa branding
+
+===============================================================================
+WHAT'S EXCLUDED FROM GIT (SECURE)
+===============================================================================
+
+These files will NOT be pushed to GitHub (good!):
+✗ keys/service_account.json
+✗ .streamlit/secrets.toml
+✗ predictions/
+✗ model_output/
+✗ __pycache__/
+
+Instead, you'll use Streamlit Cloud secrets for credentials (secure!)
+
+===============================================================================
+NEED HELP?
+===============================================================================
+
+See these files for detailed instructions:
+- STREAMLIT_CLOUD_SETUP.md (step-by-step cloud deployment)
+- GIT_COMMANDS.md (Git reference and troubleshooting)
+- DEPLOYMENT_READY.md (complete overview)
+
+===============================================================================
+READY TO PUSH! 🚀
+===============================================================================
+
+Start with step 1 above and work your way through.
+Your code is secure and ready for GitHub and Streamlit Cloud!
+
+===============================================================================

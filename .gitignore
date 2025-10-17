@@ -1,0 +1,91 @@
+# Sensitive files - DO NOT COMMIT
+keys/
+service_account.json
+*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (large files)
+Data/*.tif
+Data/*.shp
+Data/*.shx
+Data/*.dbf
+Data/*.prj
+Data/*.cpg
+*.xlsx
+*.xls
+*.csv
+
+# Large TIF files (exceed GitHub 100MB limit)
+*.tif
+nga_general_2020_geotiff/
+environmental_data/*.tif
+rwi.tif
+
+# Output files
+predictions/
+model_output/
+merged_data/
+environmental_data_excel/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Streamlit
+.streamlit/secrets.toml
+**/secrets.toml
+!**/secrets.toml.example
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
